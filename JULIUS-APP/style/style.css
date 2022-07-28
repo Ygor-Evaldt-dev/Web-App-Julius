@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "negrito";
+  src: url(../fonts/KumbhSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "padrao";
+  src: url(../fonts/KumbhSans-Regular.ttf);
+}
+
+/* variaveis */
+:root {
+  --cor-destaque: #5333ed;
+}
+
+/* MARCA */
+#marca {
+  background-color: #ffffff;
+  padding: 10px;
+}
+#marca * {
+  vertical-align: middle;
+}
+#marca img {
+  width: 40px;
+  margin-right: 10px;
+}
+#marca span {
+  font-family: "negrito";
+  font-size: 1.23rem;
+  color: var(--cor-destaque);
+}
+
+/* HEADER */
+#header {
+  background-image: linear-gradient(to right, #4d13d1, #59abe3);
+  padding: 50px 10px 30px 30px;
+  color: #ffffff;
+}
+
+#boasVindas {
+  font-family: "negrito";
+  font-size: 4rem;
+  display: block;
+}
+
+#slogan {
+  font-family: "padrao";
+  font-size: 1.4rem;
+}
+
+/* LANÇAMENTOS */
+#container {
+  padding: 10px;
+  /* display: flex; */
+  margin-top: 20px;
+}
+/* Sessão esquerda */
+#esquerda {
+  /* width: 60%; */
+  padding: 10px;
+}
+#lancamentos {
+  font-family: "negrito";
+  font-size: 2rem;
+}
+#novoLancamento {
+  /* float: right; */
+  border: none;
+  background-color: var(--cor-destaque);
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+#areaLancamento {
+  margin-top: 30px;
+}
+.blocoLancamento {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.blocoLancamento img {
+  width: 80px;
+}
+.descricaoLancamento {
+  /* float: right; */
+  text-align: right;
+}
+.descricaoLancamento span {
+  display: block;
+  font-family: "padrao";
+}
+.valor {
+  font-family: "negrito" !important;
+  font-size: 1.5rem;
+}
+.gasto {
+  color: #ff0000;
+}
+.entrada {
+  color: #329232;
+}
+
+/* sessão direita */
+#direita {
+  background-color: #ffffff;
+  border-radius: 20px;
+  /* width: 40%; */
+  padding: 10px;
+  text-align: right;
+}
+#labelRenda {
+  font-family: "negrito";
+  font-size: 1.5rem;
+  display: block;
+}
+#direita img {
+  width: 30px;
+}
+#renda {
+  font-family: "negrito";
+  font-size: 3rem;
+  color: var(--cor-destaque);
+}
