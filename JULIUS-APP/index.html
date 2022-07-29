@@ -11,6 +11,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Css -->
   <link rel="stylesheet" href="style/style.css">
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.2/chart.min.js" integrity="sha512-zjlf0U0eJmSo1Le4/zcZI51ks5SjuQXkU0yOdsOBubjSmio9iCUp8XPLkEAADZNBdR9crRy3cniZ65LF2w8sRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <title>Julius</title>
 </head>
@@ -39,46 +41,40 @@
     <section id="esquerda" class="col-md-8">
       <section class="d-md-flex justify-content-between">
         <span id="lancamentos">
-          Seus lançamentos
+          Nenhum lançamento cadastrado
         </span>
-        <button id="novoLancamento" title="Novo lançamento">
-          Novo lançamento
-        </button>
+        <button id="novoLancamento" onclick="alternaFormulario()" title="Novo lançamento">Novo lançamento</button>
+      </section>
+      <section id="formularioLancamento">
+        <form onsubmit="lancar(event)">
+          <div id="blocoTipoLancamento">
+            <input type="radio" name="tipoLancamento" id="entrada">
+            <label for="entrada" class="entrada">Entrada</label>
+            <input type="radio" name="tipoLancamento" id="gasto" checked>
+            <label for="gasto" class="gasto">Gasto</label>
+          </div>
+          <label for="valor">Valor:</label>
+          <input type="number" name="valor" min="0" step="0.01" id="valor" required>
+          <label for="descricao">Descrição:</label>
+          <input type="text" name="descricao" id="descricao" required>
+          <label for="dataLancamento">Data do lançamento:</label>
+          <input type="date" name="dataLancamento" id="dataLancamento" required>
+          <button id="botaoLancar" title="Lançar">Lançar</button>
+        </form>
       </section>
       <section id="areaLancamento">
-        <div class="blocoLancamento">
-          <img src="img/menos.png" alt="Gasto">
-          <div class="descricaoLancamento">
-            <span class="valor gasto">R$ 35,97</span>
-            <span>15/09/2022</span>
-            <span>Padaria Villas Boas</span>
-          </div>
-        </div>
-        <div class="blocoLancamento">
-          <img src="img/menos.png" alt="Gasto">
-          <div class="descricaoLancamento">
-            <span class="valor gasto">R$ 15,57</span>
-            <span>14/09/2022</span>
-            <span>Conveniencia do João</span>
-          </div>
-        </div>
-        <div class="blocoLancamento">
-          <img src="img/mais.png" alt="Entrada">
-          <div class="descricaoLancamento">
-            <span class="valor entrada">R$ 50,00</span>
-            <span>12/09/2022</span>
-            <span>Venda de Bijuteria</span>
-          </div>
-        </div>
+
       </section>
     </section>
     <!-- Sessão direita -->
     <section id="direita" class="col-md-4">
-      <span id="labelRenda">Sua renda mensal</span>
-      <img src="img/editar.png" alt="Alterar a renda mensal">
-      <span id="renda">R$ 3.000</span>
+      <span id="labelRenda">Valor em caixa</span>
+      <span id="renda">R$ 0,00</span>
+      <canvas id="graficoDinheiro"></canvas>
     </section>
   </main>
+
+  <script src="JS/index.js"></script>
 </body>
 
 </html>

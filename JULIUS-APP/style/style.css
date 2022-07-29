@@ -26,6 +26,7 @@ button {
 /* variaveis */
 :root {
   --cor-destaque: #5333ed;
+  --cor-destaque-hover: #4626e4;
 }
 
 /* MARCA */
@@ -88,6 +89,72 @@ button {
   padding: 10px;
   border-radius: 10px;
 }
+#novoLancamento:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+/* Formulario de lançamento */
+#formularioLancamento {
+  display: none;
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "padrao";
+}
+#formularioLancamento input {
+  display: block;
+  margin: 5px 0 20px 0;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  height: 30px;
+  font-family: "padrao";
+  font-size: 1.1em;
+  padding-left: 6px;
+  padding-top: 2px;
+}
+
+#blocoTipoLancamento {
+  margin: 5px 0 20px 0;
+}
+#blocoTipoLancamento input {
+  display: inline;
+  margin: 0px 0px;
+  vertical-align: middle;
+}
+#blocoTipoLancamento label {
+  vertical-align: middle;
+  font-family: "negrito";
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+
+#descricao {
+  width: 70%;
+}
+
+#excluiLancamento {
+  width: 20px;
+}
+.botaoRemover {
+  border-radius: 5px;
+  vertical-align: bottom;
+}
+
+#botaoLancar {
+  border: none;
+  outline: none;
+  background-color: var(--cor-destaque);
+  color: #ffffff;
+  font-family: "padrao";
+  font-size: 1.2em;
+  padding: 6px 20px;
+  border-radius: 5px;
+}
+#botaoLancar:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
 #areaLancamento {
   margin-top: 30px;
 }
@@ -140,5 +207,4 @@ button {
 #renda {
   font-family: "negrito";
   font-size: 3rem;
-  color: var(--cor-destaque);
 }
