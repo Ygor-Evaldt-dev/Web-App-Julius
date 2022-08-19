@@ -13,5 +13,6 @@
 ## Acesso online:
 - https://ygor-evaldt-dev.github.io/JULIUS-APP/
 
-## Status: Ainda em desenvolvimento
+## Status: 
+- Ainda em desenvolvimento
 
